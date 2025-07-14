@@ -11,13 +11,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "@deephaven/components": "^1.1.0",
+    "@deephaven/iris-grid": "^1.1.1",
+    "@deephaven/jsapi-bootstrap": "^1.1.0",
+    "@deephaven/jsapi-shim": "^1.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@deephaven/jsapi-types": "^1.0.0-dev0.39.4",
     "@eslint/js": "^9.30.1",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
     "@vitejs/plugin-react": "^4.6.0",
     "eslint": "^9.30.1",
     "eslint-plugin-react-hooks": "^5.2.0",
