@@ -6,7 +6,7 @@ import {
   type IrisGridModel,
 } from '@deephaven/iris-grid';
 import { useApi } from '@deephaven/jsapi-bootstrap';
-import { LoadingOverlay } from '@deephaven/components';
+import { LoadingOverlay, ThemePicker } from '@deephaven/components';
 
 interface AppProps {
   serverUrl: URL;
@@ -23,7 +23,12 @@ export function App({ serverUrl }: AppProps): JSX.Element {
     return <LoadingOverlay />;
   }
 
-  return <IrisGrid model={model} />;
+  return (
+    <div className="App">
+      <ThemePicker />
+      <IrisGrid model={model} />
+    </div>
+  );
 }
 
 /**
