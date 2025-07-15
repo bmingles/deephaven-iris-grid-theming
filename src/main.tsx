@@ -1,5 +1,5 @@
 import { StrictMode } from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { ApiBootstrap } from '@deephaven/jsapi-bootstrap';
 import {
   preloadTheme,
@@ -17,7 +17,9 @@ const jsapiUrl = new URL('http://localhost:10000/jsapi/dh-core.js');
 const serverUrl = new URL(jsapiUrl.origin); // Use the same origin as the jsapiUrl
 const themes: ThemeData[] = [];
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root')!);
+
+root.render(
   <StrictMode>
     <ApiBootstrap apiUrl={jsapiUrl.href}>
       <ThemeProvider themes={themes}>
@@ -26,6 +28,5 @@ ReactDOM.render(
         </IrisGridThemeProvider>
       </ThemeProvider>
     </ApiBootstrap>
-  </StrictMode>,
-  document.getElementById('root')!
+  </StrictMode>
 );
